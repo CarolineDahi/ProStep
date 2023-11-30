@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FacultyRepository\32n3aeua.ju1~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProStep.Base\ProStep.Base.csproj" />
+    <ProjectReference Include="..\ProStep.DataTransferObject\ProStep.DataTransferObject.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+	<Target Name="ExcludeFromPublish" BeforeTargets="ExcludeFilesFromPackage">
+		<ItemGroup>
+			<ExcludeFromPublish Include="wwwroot\**\*" />
+		</ItemGroup>
+	</Target>
+	<ItemGroup>
+	  <Content Include="Controllers\AccountController.cs" />
+	  <Content Include="Controllers\BootCampController.cs" />
+	  <Content Include="Controllers\CategoryController.cs" />
+	  <Content Include="Controllers\CityController.cs" />
+	  <Content Include="Controllers\CommentController.cs" />
+	  <Content Include="Controllers\CommonQuestionController.cs" />
+	  <Content Include="Controllers\CountryController.cs" />
+	  <Content Include="Controllers\CourseController.cs" />
+	  <Content Include="Controllers\FacultyController.cs" />
+	  <Content Include="Controllers\HomeController.cs" />
+	  <Content Include="Controllers\NotificationController.cs" />
+	  <Content Include="Controllers\PortfolioController.cs" />
+	  <Content Include="Controllers\RoadMapController.cs" />
+	  <Content Include="Controllers\UniversityController.cs" />
+	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="7.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="VueCliMiddleware" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProStep.Courses\ProStep.Courses.csproj" />
+    <ProjectReference Include="..\ProStep.DataSourse\ProStep.DataSourse.csproj" />
+    <ProjectReference Include="..\ProStep.General\ProStep.General.csproj" />
+    <ProjectReference Include="..\ProStep.Maps\ProStep.Maps.csproj" />
+    <ProjectReference Include="..\ProStep.Profile\ProStep.Profile.csproj" />
+    <ProjectReference Include="..\ProStep.Security\ProStep.Security.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Files\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProStep.Base\ProStep.Base.csproj" />
+    <ProjectReference Include="..\ProStep.DataTransferObject\ProStep.DataTransferObject.csproj" />
+    <ProjectReference Include="..\ProStep.Model\ProStep.Model.csproj" />
+    <ProjectReference Include="..\ProStep.SharedKernel\ProStep.SharedKernel.csproj" />
+    <ProjectReference Include="..\ProStep.Shared\ProStep.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
